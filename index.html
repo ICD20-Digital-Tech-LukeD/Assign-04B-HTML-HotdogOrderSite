@@ -1,9 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <!--Title-->
+    <title>Luke's Hotdog Store</title>
+    <!--Link to stylesheet-->
+    <link rel="stylesheet" href="./css/style.css"/>
   </head>
   <body>
-    <p>Paragraph</p>
+    <!--Link to JavaScript-->
+    <script src="script.js"></script>
+    <!--Header-->
+    <h1>Luke's Hotdog Shop</h1>
+    <!--Text-->
+    <p>Select your size and condiments</p>
+    <!--Label for days-->
+      <label for="sizes">Select size:</label>
+    <!--Select options for days-->
+      <select name="sizes" id="sizes">
+        <!--Below are all the options for the days in the drop down-->
+        <option value="small">Small ($2.99)</option>
+        <option value="medium">Medium ($3.99)</option>
+        <option value="large">Large ($5.99)</option>
+      </select>
+      <form action="script.js">
+        <input type="checkbox" id="ketchup" name="condiment" value="ketchup">
+        <label for="ketchup">Ketchup$</label><br>
+        <input type="checkbox" id="mayo" name="condiment" value="mayo">
+        <label for="mayo">Mayo($0.25)</label><br>
+        <input type="checkbox" id="mustard" name="condiment" value="mustard">
+        <label for="mustard">Mustard($0.25)</label><br>
+        <input type="checkbox" id="relish" name="condiment" value="relish">
+        <label for="relish">Relish($0.25)</label><br><br>
+      </form>
+      <br><br>
+    <!--Button that starts the function that tells you how much to pay for entry-->
+      <button onclick="OrderCalculate()">Submit</button>
+      <br><br>
+    <!--Where the result of the above function is displayed-->
+    <div id="subtotal">Subtotal: </div>
+    <div id="total">Total: </div>
+    <div id="result"></div>
+    <br>
   </body>
 </html>
