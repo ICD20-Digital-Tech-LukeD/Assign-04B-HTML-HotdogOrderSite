@@ -1,45 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--Title-->
-    <title>Luke's Hotdog Store</title>
-    <!--Link to stylesheet-->
-    <link rel="stylesheet" href="./css/style.css"/>
-  </head>
-  <body>
-    <!--Link to JavaScript-->
-    <script src="script.js"></script>
-    <!--Header-->
-    <h1>Luke's Hotdog Shop</h1>
-    <!--Text-->
-    <p>Select your size and condiments</p>
-    <!--Label for days-->
-      <label for="sizes">Select size:</label>
-    <!--Select options for days-->
-      <select name="sizes" id="sizes">
-        <!--Below are all the options for the days in the drop down-->
-        <option value="small">Small ($2.99)</option>
-        <option value="medium">Medium ($3.99)</option>
-        <option value="large">Large ($5.99)</option>
-      </select>
-      <form action="script.js">
-        <input type="checkbox" id="ketchup" name="condiment" value="ketchup">
-        <label for="ketchup">Ketchup$</label><br>
-        <input type="checkbox" id="mayo" name="condiment" value="mayo">
-        <label for="mayo">Mayo($0.25)</label><br>
-        <input type="checkbox" id="mustard" name="condiment" value="mustard">
-        <label for="mustard">Mustard($0.25)</label><br>
-        <input type="checkbox" id="relish" name="condiment" value="relish">
-        <label for="relish">Relish($0.25)</label><br><br>
-      </form>
-      <br><br>
-    <!--Button that starts the function that tells you how much to pay for entry-->
-      <button onclick="OrderCalculate()">Submit</button>
-      <br><br>
-    <!--Where the result of the above function is displayed-->
-    <div id="subtotal">Subtotal: </div>
-    <div id="total">Total: </div>
-    <div id="result"></div>
+
+<head>
+  <!-- Googles MDL -->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-orange.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- character set to utf-8-->
+  <meta charset="utf-8">
+  <!-- Tab description -->
+  <meta name="description" content="Luke's Hotdog Ordering Site">
+  <!-- Gives google more information about the website -->
+  <meta name="keywords" content="immaculata, ICD20">
+  <!-- So that its known I created this site -->
+  <meta name="author" content="Luke Di Bert">
+  <!-- tells the browser how to control the viewport and dimension scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Title-->
+  <title>Luke's Hotdog Website</title>
+  <!-- My favicon that shows up in the browser tab-->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!--Link to stylesheet-->
+  <link rel="stylesheet" href="./css/style.css"/>
+</head>
+
+<body>
+  <!--Link to JavaScript-->
+  <script src="/js/script.js"></script>
+  <!--Header-->
+  <h1>Luke's Hotdog Shop</h1>
+  <!--Text-->
+  <p>Select your size and condiments</p>
+  <!--Label for days-->
+  <label for="sizes">Select size:</label>
+  <!--Select options for days-->
+  <select name="sizes" id="sizes">
+    <!--Below are all the options for the days in the drop down-->
+    <option value="small">Small ($2.99)</option>
+    <option value="medium">Medium ($3.99)</option>
+    <option value="large">Large ($5.99)</option>
+  </select>
+  <form action="script.js">
+    <!--checkboxes for each condiment and the price of each-->
+    <input type="checkbox" id="ketchup" name="condiment" value="ketchup">
+    <label for="ketchup">Ketchup ($0.25)</label><br>
+    <input type="checkbox" id="mayo" name="condiment" value="mayo">
+    <label for="mayo">Mayo ($0.25)</label><br>
+    <input type="checkbox" id="mustard" name="condiment" value="mustard">
+    <label for="mustard">Mustard ($0.25)</label><br>
+    <input type="checkbox" id="relish" name="condiment" value="relish">
+    <label for="relish">Relish ($0.25)</label><br><br>
+  </form>
+  <br><br>
+  <!--Button that starts the function that tells you how much to pay for entry-->
+  <button id="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="OrderCalculate()">Submit</button>
+  <br><br>
+  <!--Subtotal of order-->
+  <div id="subtotal">Subtotal: </div>
+  <!--Total price of order after tax-->
+  <div id="total">Total: </div>
     <br>
-  </body>
+    <br>
+    <!--order summary-->
+    <div id="result">Order Summary</div>
+  <br>
+  <br>
+  <!--hotdog image-->
+  <img src="images/hotdog.jpg" width="300px" height="200px">
+</body>
+
 </html>
